@@ -1,32 +1,33 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http"
+import {HttpClient, HttpHeaders} from "@angular/common/http"
 import { Observable, pipe } from 'rxjs';
 import {tap,catchError,map} from "rxjs/operators"
-import { IBook } from '../Models/Ibook';
+import { IBook } from '../Models/IBook';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
 
-  URL:string="https://reqres.in/api"
+  URL:string="http://localhost:4000/api/books"
   constructor(private http: HttpClient) { }
 
 
-  public getBooks():Observable<any>{
-    // return this.http.get<IBook>(`${URL}/?page=2`)
-    const MAX=3
-    const MIN=1
-    // return this.http.get(`${this.URL}/users?page=${Math.random() * (MAX - MIN) + MIN}`)
-    
-    // const page1=this.http.get(`${this.URL}/users?page=1`)
-    // const users=page1.next()
-    // const page2=this.http.get(`${this.URL}/users?page=2`)
+  public getBooks():Observable<IBook>{
+    return this.http.get<IBook>(this.URL) 
+  }
 
+  public insertBook(book: IBook):Observable<IBook>{
 
-    return this.http.get(`${this.URL}/users?page=1`) 
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization: ''
+        
+      })
+      
+    };
 
-
-
+    return this.http.post<IBook>(this.URL,book,httpOptions)
   }
 }
