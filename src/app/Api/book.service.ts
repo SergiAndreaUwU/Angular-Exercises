@@ -13,11 +13,12 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
 
-  public getBooks():Observable<IBook>{
+  //observables
+  public observable_getBooks():Observable<IBook>{
     return this.http.get<IBook>(this.URL) 
   }
 
-  public insertBook(book: IBook):Observable<IBook>{
+  public observable_insertBook(book: IBook):Observable<IBook>{
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -29,5 +30,11 @@ export class BookService {
     };
 
     return this.http.post<IBook>(this.URL,book,httpOptions)
+  }
+
+  //promises
+
+   public promise_getBooks() {
+    return fetch(this.URL).then(res=>res.json()).then((data)=>{console.log(data)}).catch(e=>console.error("error",e))
   }
 }
