@@ -29,7 +29,7 @@ export class ApiCallsComponent implements OnInit, OnDestroy {
         console.log(data);
       },
       error: (e) => {
-        console.error(`something went wrong: ${e}`);
+        console.error(`something went wrong: ${e.message}. \n Did you forget to start Express server and mongoDB?`);
       },
       complete: () => {},
     });

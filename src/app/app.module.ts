@@ -13,6 +13,7 @@ import { StructuralDirectivesComponent } from './Components/Exercises/structural
 import { AttributeDirectivesComponent } from './Components/Exercises/attribute-directives/attribute-directives.component';
 import { ApiCallsComponent } from './Components/Exercises/api-calls/api-calls.component';
 import { ComponentCommunicationComponent } from './Components/Exercises/component-communication/component-communication.component';
+import { ReactExercise } from './Components/ReactExercise/ReactExercise.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ComponentCommunicationComponent } from './Components/Exercises/componen
     AttributeDirectivesComponent,
     ApiCallsComponent,
     ComponentCommunicationComponent,
+    ReactExercise
   ],
   imports: [
     CommonModule,
