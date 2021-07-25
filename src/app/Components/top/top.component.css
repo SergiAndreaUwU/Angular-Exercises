@@ -1,0 +1,8 @@
+.top{
+    border: 2px solid black;
+    background-color: #ff3932;
+    width: 100%;
+    height: 6vh;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

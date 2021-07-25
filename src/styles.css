@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    min-width: 895px;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+
+
+}
