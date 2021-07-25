@@ -1,1 +1,9 @@
-<p>component-communication works!</p>
+<div class="grid">
+    <div class="top-left"><app-input-output (sendVal)="onSentVal($event)"></app-input-output></div>
+    <div class="top-right"><app-component1 [value]="value"></app-component1></div>
+    <div class="middle-left"><app-service-communication></app-service-communication></div>
+    <div class="middle-right"><app-component2></app-component2></div>
+    <div class="bottom-left"><app-redux></app-redux></div>
+    <div class="bottom-right"><app-component3></app-component3></div>
+
+</div>

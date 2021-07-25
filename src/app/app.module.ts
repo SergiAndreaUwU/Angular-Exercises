@@ -14,6 +14,12 @@ import { AttributeDirectivesComponent } from './Components/Exercises/attribute-d
 import { ApiCallsComponent } from './Components/Exercises/api-calls/api-calls.component';
 import { ComponentCommunicationComponent } from './Components/Exercises/component-communication/component-communication.component';
 import { ReactExercise } from './Components/ReactExercise/ReactExercise.component';
+import { InputOutputComponent } from './Components/Exercises/component-communication/communication-ways/input-output.component';
+import { ServiceCommunicationComponent } from './Components/Exercises/component-communication/communication-ways/service-communication.component';
+import { ReduxComponent } from './Components/Exercises/component-communication/communication-ways/redux.component';
+import { Component1Component } from './Components/Exercises/component-communication/communication-ways/component1.component';
+import { Component2Component } from './Components/Exercises/component-communication/communication-ways/component2.component';
+import { Component3Component } from './Components/Exercises/component-communication/communication-ways/component3.component';
 
 
 @NgModule({
@@ -26,7 +32,13 @@ import { ReactExercise } from './Components/ReactExercise/ReactExercise.componen
     AttributeDirectivesComponent,
     ApiCallsComponent,
     ComponentCommunicationComponent,
-    ReactExercise
+    ReactExercise,
+    InputOutputComponent,
+    ServiceCommunicationComponent,
+    ReduxComponent,
+    Component1Component,
+    Component2Component,
+    Component3Component
   ],
   imports: [
     CommonModule,

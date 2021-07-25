@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-component-communication',
   templateUrl: './component-communication.component.html',
+  styleUrls: ['./component-communication.component.css'],
 })
-export class ComponentCommunicationComponent implements OnInit {
+export class ComponentCommunicationComponent  {
 
   constructor() { }
+  value:number=0
 
-  ngOnInit(): void {
+
+  onSentVal(value:any){
+    this.value=value
   }
 
 }
