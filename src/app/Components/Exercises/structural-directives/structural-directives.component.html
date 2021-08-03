@@ -1,1 +1,9 @@
-<p>structural-directives works!</p>
+<p>every time you click this button it'll add another random fruit until they are 10</p>
+<button class="btn btn-danger" (click)="handleClick()">click me!</button>
+
+<p *ngIf="listOfFruits.length>0">here are the added fruits:</p>
+
+<div class="custom-flex-container" >
+<div class="custom-card" *ngFor="let fruit of listOfFruits">{{fruit}}</div>
+</div>
+
